@@ -11,6 +11,9 @@ namespace Models.DbModels
     {
         [Required, MaxLength(50)]
         public string DepartmentId { get; set; }
+        /// <summary>
+        /// 角色ID
+        /// </summary>
         [Required, MaxLength(50)]
         public string RoleId { get; set; }
 
