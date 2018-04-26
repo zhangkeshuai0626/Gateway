@@ -16,19 +16,18 @@ namespace Models.DbModels
         /// </summary>
         [Display(Name = "数据类型Id")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "数据Id不能为空"), MaxLength(50)]
-        [Unique(ColumnName = "DictionaryId", ErrorMessage = "数据Id不能重复", TableName = "T_Dictionary")]
+        [Unique(ColumnName = "DictionaryId", ErrorMessage = "数据Id不能重复", TableName = "t_dictionary")]
         public string DictionaryId { get; set; }
         /// <summary>
         /// 数据类型Id
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = "数据类型Id不能为空"), MaxLength(50)]
-        [Unique(ColumnName = "DictionaryTypeId", ErrorMessage = "数据类型不能重复", TableName = "T_Dictionary")]
         public string DictionaryTypeId { get; set; }
         /// <summary>
         /// 变量类型
         /// </summary>
         [Required(ErrorMessage = "变量名称不能为空"), MaxLength(50)]
-        [Unique(ColumnName = "VarName", ErrorMessage = "数据名称重复", TableName = "T_Dictionary")]
+        [Unique(ColumnName = "VarName", ErrorMessage = "数据名称重复", TableName = "t_dictionary")]
         public string VarName { get; set; }
         /// <summary>
         /// 变量值

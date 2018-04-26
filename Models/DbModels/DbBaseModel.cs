@@ -15,7 +15,7 @@ namespace Models.DbModels
     {
         public DbBaseModel()
         {
-            LoginSessionModel user = SessionHelper.Get(Key.SessionKey.LoginInfo) as LoginSessionModel;
+            LoginSessionModel user = SessionHelper.Get(Enumer.Session.LoginInfo) as LoginSessionModel;
             if (user == null)
             {
                 this.CreateBy = "";
@@ -28,7 +28,7 @@ namespace Models.DbModels
             this.Enable = true;
 
         }
-        protected DbContext Db = DbGatewayContext.CreateDbContext();
+        protected DbContext Db = DbFactory.CreateDbContext();
         /// <summary>
         /// 主键
         /// </summary>
@@ -65,15 +65,17 @@ namespace Models.DbModels
         [Display(Name = "最后修改时间")]
         public DateTime? LastModifyTime { get; set; }
         /// <summary>
-        /// 版本号
-        /// </summary>
-        [Timestamp, JsonIgnoreAttribute]
-        public byte[] Version { get; set; }
-        /// <summary>
         /// 备注
         /// </summary>
         [JsonIgnoreAttribute]
         public string Remark { get; set; }
+
+        /// <summary>
+        /// 版本号
+        /// </summary>
+        [Timestamp, JsonIgnoreAttribute]
+        public byte[] Version { get; set; }
+
         /// <summary>
         /// 模型验证的方法
         /// </summary>

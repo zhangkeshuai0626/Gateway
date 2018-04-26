@@ -39,10 +39,10 @@ namespace Models.Validator
             }
             else
             {
-                string tableName = Util.GetInstance().SqlFilter(TableName);
-                string columnName = Util.GetInstance().SqlFilter(ColumnName);
+                string tableName = Utility.GetInstance().SqlFilter(TableName);
+                string columnName = Utility.GetInstance().SqlFilter(ColumnName);
                 string sql = string.Format("select count(1) from {0} where 1=1 and {1} = @p0 ", tableName, columnName);
-                var db = DbGatewayContext.CreateDbContext();
+                var db = DbFactory.CreateDbContext();
                 int n = db.Database.SqlQuery<int>(sql, value).FirstOrDefault();
                 return n <= 0;
             }

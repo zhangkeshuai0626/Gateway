@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configs\Configs.cs" />
-    <Compile Include="Configs\Key.cs" />
+    <Compile Include="Configs\Enumer.cs" />
     <Compile Include="Extension\Objects.cs" />
     <Compile Include="Extension\Regular.cs" />
     <Compile Include="Extension\Structs.cs" />
@@ -64,7 +64,7 @@
     <Compile Include="Utils\LogHelper.cs" />
     <Compile Include="Utils\SessionHelper.cs" />
     <Compile Include="Extension\Strings.cs" />
-    <Compile Include="Utils\Util.cs" />
+    <Compile Include="Utils\Utility.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -10,3 +10,15 @@ E:\学习\自建项目\门户网站\Gateway\Common\obj\Debug\Common.csprojResolv
 E:\学习\自建项目\门户网站\Gateway\Common\bin\Debug\EntityFramework.dll
 E:\学习\自建项目\门户网站\Gateway\Common\bin\Debug\EntityFramework.xml
 E:\学习\自建项目\门户网站\Gateway\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\Common.dll
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\Common.pdb
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\EntityFramework.dll
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\log4net.dll
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\Newtonsoft.Json.dll
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\EntityFramework.xml
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\log4net.xml
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\Newtonsoft.Json.xml
+E:\练习项目\门户网站\Gateway\Common\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\练习项目\门户网站\Gateway\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\练习项目\门户网站\Gateway\Common\obj\Debug\Common.dll
+E:\练习项目\门户网站\Gateway\Common\obj\Debug\Common.pdb

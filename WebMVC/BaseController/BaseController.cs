@@ -9,7 +9,7 @@ namespace DFlow.Web.Controllers
         /// <summary>
         /// 工具类
         /// </summary>
-        public Common.Utils.Util Util = Common.Utils.Util.GetInstance();
+        public Common.Utils.Utility Util = Common.Utils.Utility.GetInstance();
 
         /// <summary>
         /// 返回当前用户登陆信息
@@ -18,7 +18,7 @@ namespace DFlow.Web.Controllers
         {
             get
             {
-                object obj = SessionHelper.Get(Key.SessionKey.LoginInfo);
+                object obj = SessionHelper.Get(Enumer.Session.LoginInfo);
                 if (obj != null)
                 {
                     return obj as LoginSessionModel;

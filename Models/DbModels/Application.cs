@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Validator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,6 +14,13 @@ namespace Models.DbModels
         public string ApplicationId { get; set; }
         [Required, MaxLength(50), Display(Name = "应用程序名称")]
         public string ApplicationName { get; set; }
+
+        [Required, MaxLength(50), Display(Name = "应用程序编号")]
+        [Unique(TableName = "t_application", ColumnName = "ApplicationCode", ErrorMessage = "应用程序编号不能为空")]
+        public string ApplicationCode { get; set; }
+        [Required,  Display(Name = "应用程序顺序")]
+        public int Sort { get; set; }
+
         [Required, Display(Name = "应用程序类型")]
         public int ApplicationType { get; set; }
         [Required, MaxLength(50), Display(Name = "所属程序ID")]

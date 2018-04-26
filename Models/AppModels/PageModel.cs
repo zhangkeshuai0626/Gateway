@@ -31,7 +31,7 @@ namespace Models.AppModels
         /// <summary>
         /// 总条数
         /// </summary>
-        [JsonProperty(PropertyName ="total")]
+        [JsonProperty(PropertyName = "total")]
         public int Total { get; set; }
         /// <summary>
         /// 数据

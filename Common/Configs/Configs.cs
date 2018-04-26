@@ -30,7 +30,11 @@ public static class Configs
     /// <summary>
     /// Gateway 数据库实体缓存键
     /// </summary>
-    public static readonly string GATEWAY_ENTITY = "GatewayEntity";
+    public const string GATEWAY_ITEM = "GatewayEntity";
+    /// <summary>
+    /// Gateway 数据库实体缓存键
+    /// </summary>
+    public const string DBHELPER_ITEM = "DbHelper";
 
 }
 

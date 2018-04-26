@@ -127,56 +127,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\config.js" />
-    <Content Include="Scripts\libs\bootstrap\css\bootstrap-combined.min.css" />
-    <Content Include="Scripts\libs\bootstrap\css\bootstrap-table.css" />
-    <Content Include="Scripts\libs\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Scripts\libs\bootstrap\css\treegrid.css" />
-    <Content Include="Scripts\libs\bootstrap\js\bootstrap-table-treegrid.min.js" />
-    <Content Include="Scripts\libs\bootstrap\js\bootstrap-table-zh-CN.js" />
-    <Content Include="Scripts\libs\bootstrap\js\bootstrap-table.js" />
-    <Content Include="Scripts\libs\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Scripts\libs\bootstrap\js\jquery.treegrid.js" />
-    <Content Include="Scripts\libs\contextmenu\css\contextMenu.css" />
-    <Content Include="Scripts\libs\contextmenu\img\add.png" />
-    <Content Include="Scripts\libs\contextmenu\img\copy.png" />
-    <Content Include="Scripts\libs\contextmenu\img\del.png" />
-    <Content Include="Scripts\libs\contextmenu\img\paste.png" />
-    <Content Include="Scripts\libs\contextmenu\js\contextMenu.js" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\css\font-awesome.css" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\css\font-awesome.min.css" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="Scripts\libs\jquery-1.11.3.min.js" />
-    <Content Include="Scripts\libs\jquery.metadata.js" />
-    <Content Include="Scripts\libs\layer\laydate.js" />
-    <Content Include="Scripts\libs\layer\layer.js" />
-    <Content Include="Scripts\libs\layer\need\laydate.css" />
-    <Content Include="Scripts\libs\layer\theme\default\icon-ext.png" />
-    <Content Include="Scripts\libs\layer\theme\default\icon.png" />
-    <Content Include="Scripts\libs\layer\theme\default\layer.css" />
-    <Content Include="Scripts\libs\layer\theme\default\loading-0.gif" />
-    <Content Include="Scripts\libs\layer\theme\default\loading-1.gif" />
-    <Content Include="Scripts\libs\layer\theme\default\loading-2.gif" />
-    <Content Include="Scripts\libs\requirejs\css.js" />
-    <Content Include="Scripts\libs\requirejs\require.js" />
-    <Content Include="Scripts\libs\validate\additional-methods.js" />
-    <Content Include="Scripts\libs\validate\jquery.validate-1.10.0.js" />
-    <Content Include="Scripts\libs\webuploader\css\Uploader.swf" />
-    <Content Include="Scripts\libs\webuploader\css\webuploader.css" />
-    <Content Include="Scripts\libs\webuploader\images\bg.png" />
-    <Content Include="Scripts\libs\webuploader\images\icons.png" />
-    <Content Include="Scripts\libs\webuploader\images\image.png" />
-    <Content Include="Scripts\libs\webuploader\images\progress.png" />
-    <Content Include="Scripts\libs\webuploader\js\webuploader.js" />
-    <Content Include="Scripts\public\bootstrapHelper.js" />
-    <Content Include="Scripts\public\uploader.js" />
-    <Content Include="Scripts\public\utils.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbInit.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -187,6 +142,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DbInit.aspx.cs">
+      <DependentUpon>DbInit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DbInit.aspx.designer.cs">
+      <DependentUpon>DbInit.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -194,14 +156,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Scripts\libs\font-awesome-4.7.0\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -211,6 +165,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{3707B0E9-175F-423D-B8A2-D64EB53A638F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8292bfd9-d6f1-4ef0-b08c-5cf15cd058ee}</Project>
       <Name>Common</Name>

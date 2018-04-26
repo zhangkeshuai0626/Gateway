@@ -15,7 +15,7 @@ namespace Common.Utils
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static object Get(Key.SessionKey key)
+        public static object Get(Enumer.Session key)
         {
             string name = key.ToString();
             return HttpContext.Current.Session[name];
@@ -26,7 +26,7 @@ namespace Common.Utils
         /// </summary>
         /// <param name="sessionKey"></param>
         /// <param name="data"></param>
-        public static void Insert(Key.SessionKey sessionKey, object data)
+        public static void Insert(Enumer.Session sessionKey, object data)
         {
             string key = sessionKey.ToString();
             HttpContext.Current.Session[key] = data;
@@ -35,7 +35,7 @@ namespace Common.Utils
         /// 移除Session
         /// </summary>
         /// <param name="sessionKey"></param>
-        public static void Remove(Key.SessionKey sessionKey)
+        public static void Remove(Enumer.Session sessionKey)
         {
             string key = sessionKey.ToString();
             HttpContext.Current.Session.Remove(key);

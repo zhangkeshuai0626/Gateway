@@ -23,7 +23,7 @@ namespace Models.AppModels
         /// <summary>
         /// 职务信息
         /// </summary>
-        public Job Job { get; set; }
+        public Role Role { get; set; }
         /// <summary>
         /// 应用程序信息
         /// </summary>

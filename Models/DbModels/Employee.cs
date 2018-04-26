@@ -14,10 +14,8 @@ namespace Models.DbModels
         [Required(ErrorMessage = "员工编号不能为空"), MaxLength(50)]
         public string EmployeeNo { get; set; }
 
-        [Required(ErrorMessage = "员工登录帐号不能为空"), MaxLength(20, ErrorMessage = "登录帐号不能超过20个字符")]
-        public string LoginAccount { get; set; }
-        [Required(ErrorMessage = "员工登录密码不能为空"), MaxLength(50)]
-        public string LoginPassword { get; set; }
+       
+        
         [Required(ErrorMessage = "员工姓名不能为空"), MaxLength(50)]
         public string EmployeeName { get; set; }
         [Required(ErrorMessage = "性别不能为空")]
@@ -27,15 +25,9 @@ namespace Models.DbModels
         public string DepartmentId { get; set; }
 
         [Required(ErrorMessage = "职务Id不能为空"), MaxLength(50)]
-        public string JobId { get; set; }
-        /// <summary>
-        /// 盐
-        /// </summary>
-        [MaxLength(10)]
-        public string Salt { get; set; }
+        public string RoleId { get; set; }
 
-        [Required, RegularExpression(Regular.Email, ErrorMessage = "邮箱格式不合法")]
-        public string Email { get; set; }
+
         /// <summary>
         /// 出生年月
         /// </summary>

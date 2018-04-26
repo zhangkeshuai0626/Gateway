@@ -9,26 +9,7 @@
 
     public class DbGatewayContext : DbContext
     {
-        public enum DbName
-        {
-            GatewayEntity = 0
-        }
 
-        /// <summary>
-        /// 获取线程内唯一的DbContext
-        /// </summary>
-        /// <returns></returns>
-        public static DbContext CreateDbContext()
-        {
-
-            DbContext dbContext = HttpHelper.GetHttpContextItem(Configs.GATEWAY_ENTITY) as DbContext;
-            if (dbContext == null)
-            {
-                dbContext = new DbGatewayContext();
-                HttpHelper.SetHttpContextItem(Configs.GATEWAY_ENTITY, dbContext);
-            }
-            return dbContext;
-        }
         /// <summary>
         /// 私有的构造函数, 防止外部new
         /// </summary>
@@ -43,15 +24,15 @@
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<DepartmentApplication> DepartmentApplication { get; set; }
-        public virtual DbSet<DepartmentJob> DepartmentJob { get; set; }
-        public virtual DbSet<DepartmentJobApplication> DepartmentJobApplication { get; set; }
+        public virtual DbSet<DepartmentRole> DepartmentRole { get; set; }
+        public virtual DbSet<DepartmentRoleApplication> DepartmentRoleApplication { get; set; }
         public virtual DbSet<Dictionary> Dictionary { get; set; }
         public virtual DbSet<EmployeeApplication> EmployeeApplication { get; set; }
         public virtual DbSet<EmployeeDepartment> EmployeeDepartment { get; set; }
-        public virtual DbSet<Job> Job { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Log> Log { get; set; }
-        public virtual DbSet<ApplicationButton> ApplicationButton { get; set; }
         public virtual DbSet<DictionaryType> DictionaryType { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
         #endregion
         /// <summary>
         /// 模型和数据表映射关系
@@ -59,20 +40,20 @@
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Application>().ToTable("T_Application");
-            modelBuilder.Entity<Department>().ToTable("T_Department");
-            modelBuilder.Entity<Dictionary>().ToTable("T_Dictionary");
-            modelBuilder.Entity<Employee>().ToTable("T_Employee");
-            modelBuilder.Entity<DepartmentApplication>().ToTable("T_DepartmentApplication");
-            modelBuilder.Entity<DepartmentJob>().ToTable("T_DepartmentJob");
-            modelBuilder.Entity<DepartmentJobApplication>().ToTable("T_DepartmentJobApplication");
-            modelBuilder.Entity<Dictionary>().ToTable("T_Dictionary");
-            modelBuilder.Entity<EmployeeApplication>().ToTable("T_EmployeeApplication");
-            modelBuilder.Entity<EmployeeDepartment>().ToTable("T_EmployeeDepartment");
-            modelBuilder.Entity<Job>().ToTable("T_Job");
-            modelBuilder.Entity<Log>().ToTable("T_Log");
-            modelBuilder.Entity<ApplicationButton>().ToTable("T_ApplicationButton");
-            modelBuilder.Entity<DictionaryType>().ToTable("T_DictionaryType");
+            modelBuilder.Entity<Application>().ToTable("t_application");
+            modelBuilder.Entity<Department>().ToTable("t_department");
+            modelBuilder.Entity<Dictionary>().ToTable("t_dictionary");
+            modelBuilder.Entity<Employee>().ToTable("t_employee");
+            modelBuilder.Entity<DepartmentApplication>().ToTable("t_department_application");
+            modelBuilder.Entity<DepartmentRole>().ToTable("t_departmentrole");
+            modelBuilder.Entity<DepartmentRoleApplication>().ToTable("t_departmentroleapplication");
+            modelBuilder.Entity<Dictionary>().ToTable("t_dictionary");
+            modelBuilder.Entity<EmployeeApplication>().ToTable("t_employeeapplication");
+            modelBuilder.Entity<EmployeeDepartment>().ToTable("t_employeedepartment");
+            modelBuilder.Entity<Role>().ToTable("t_role");
+            modelBuilder.Entity<Log>().ToTable("t_log");
+            modelBuilder.Entity<DictionaryType>().ToTable("t_dictionarytype");
+            modelBuilder.Entity<Login>().ToTable("t_login");
         }
     }
 

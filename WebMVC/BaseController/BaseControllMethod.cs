@@ -37,8 +37,8 @@ namespace DFlow.Web.Controllers
                 if (Request["order"] != null)
                 {
                     p.Order = new List<bool>();
-                    string[] order = Request["order"].Split(',');
-                    foreach (var item in order)
+                    string[] Sort = Request["Sort"].Split(',');
+                    foreach (var item in Sort)
                     {
                         if (item.ToLower() == "asc")
                         {

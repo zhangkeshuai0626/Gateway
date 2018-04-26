@@ -1,5 +1,0 @@
-E:\学习\自建项目\门户网站\Gateway\ConsoleTest\bin\Debug\ConsoleTest.exe.config
-E:\学习\自建项目\门户网站\Gateway\ConsoleTest\bin\Debug\ConsoleTest.exe
-E:\学习\自建项目\门户网站\Gateway\ConsoleTest\bin\Debug\ConsoleTest.pdb
-E:\学习\自建项目\门户网站\Gateway\ConsoleTest\obj\Debug\ConsoleTest.exe
-E:\学习\自建项目\门户网站\Gateway\ConsoleTest\obj\Debug\ConsoleTest.pdb

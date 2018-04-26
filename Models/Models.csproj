@@ -74,25 +74,37 @@
     <Compile Include="AppModels\DataResult.cs" />
     <Compile Include="AppModels\LoginSessionModel.cs" />
     <Compile Include="AppModels\PageModel.cs" />
+    <Compile Include="DbFactory.cs" />
     <Compile Include="DbModels\Application.cs" />
-    <Compile Include="DbModels\ApplicationButton.cs" />
     <Compile Include="DbModels\DbBaseModel.cs" />
     <Compile Include="DbModels\Department.cs" />
     <Compile Include="DbModels\DepartmentApplication.cs" />
-    <Compile Include="DbModels\DepartmentJob.cs" />
-    <Compile Include="DbModels\DepartmentJobApplication.cs" />
+    <Compile Include="DbModels\DepartmentRole.cs" />
+    <Compile Include="DbModels\DepartmentRoleApplication.cs" />
     <Compile Include="DbModels\Dictionary.cs" />
     <Compile Include="DbModels\DictionaryType.cs" />
     <Compile Include="DbModels\Employee.cs" />
     <Compile Include="DbModels\EmployeeApplication.cs" />
     <Compile Include="DbModels\EmployeeDepartment.cs" />
-    <Compile Include="DbModels\Job.cs" />
+    <Compile Include="DbModels\Role.cs" />
     <Compile Include="DbModels\Log.cs" />
-    <Compile Include="DbModels\Person.cs" />
     <Compile Include="DbGatewayContext.cs" />
-    <Compile Include="Migrations\201804260541162_papertest.cs" />
-    <Compile Include="Migrations\201804260541162_papertest.Designer.cs">
-      <DependentUpon>201804260541162_papertest.cs</DependentUpon>
+    <Compile Include="DbModels\Login.cs" />
+    <Compile Include="Migrations\201804261601390_papertest.cs" />
+    <Compile Include="Migrations\201804261601390_papertest.Designer.cs">
+      <DependentUpon>201804261601390_papertest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804261629032_papertest1.cs" />
+    <Compile Include="Migrations\201804261629032_papertest1.Designer.cs">
+      <DependentUpon>201804261629032_papertest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804261636273_papertest2.cs" />
+    <Compile Include="Migrations\201804261636273_papertest2.Designer.cs">
+      <DependentUpon>201804261636273_papertest2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804261636516_papertest3.cs" />
+    <Compile Include="Migrations\201804261636516_papertest3.Designer.cs">
+      <DependentUpon>201804261636516_papertest3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,8 +144,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804260541162_papertest.resx">
-      <DependentUpon>201804260541162_papertest.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804261601390_papertest.resx">
+      <DependentUpon>201804261601390_papertest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261629032_papertest1.resx">
+      <DependentUpon>201804261629032_papertest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261636273_papertest2.resx">
+      <DependentUpon>201804261636273_papertest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261636516_papertest3.resx">
+      <DependentUpon>201804261636516_papertest3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
