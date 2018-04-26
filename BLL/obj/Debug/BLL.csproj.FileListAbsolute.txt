@@ -1,0 +1,4 @@
+E:\学习\自建项目\门户网站\Gateway\BLL\bin\Debug\BLL.dll
+E:\学习\自建项目\门户网站\Gateway\BLL\bin\Debug\BLL.pdb
+E:\学习\自建项目\门户网站\Gateway\BLL\obj\Debug\BLL.dll
+E:\学习\自建项目\门户网站\Gateway\BLL\obj\Debug\BLL.pdb
