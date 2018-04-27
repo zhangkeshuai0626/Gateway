@@ -9,16 +9,34 @@ namespace WebMVC.Filters
     /// <summary>
     /// 检测用户是否登陆
     /// </summary>
-    public class CheckLogin : ActionFilterAttribute
+    public class CheckLogin : AuthorizeAttribute
     {
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
-            var loginInfoSession = filterContext.HttpContext.Session[Enumer.Session.LoginInfo.ToString()];
+            //根据需要添加
+            string controllerName = filterContext.RouteData.Values["controller"].ToString();
+            string actionName = filterContext.RouteData.Values["action"].ToString();
+            if (controllerName == Configs.DEFAULT_CONTROLLER && actionName == Configs.DEFAULT_VIEW)
+            {
+                ContentResult content = new ContentResult() { Content = "请登录" };
+                filterContext.Result = content;
+            }
+            else
+            {
+                string defaultUrl = string.Format("/{0}/{1}/{2}", Configs.IIS_DIRECTORY, Configs.DEFAULT_CONTROLLER, Configs.DEFAULT_VIEW);
+                filterContext.HttpContext.Server.Transfer(defaultUrl);
+            }
+        }
+
+        protected override bool AuthorizeCore(HttpContextBase httpContext)
+        {
+            base.AuthorizeCore(httpContext);
+            var loginInfoSession = httpContext.Session[Enumer.Session.LoginInfo.ToString()];
             if (loginInfoSession == null)
             {
-                string defaultUrl = Configs.IIS_DIRECTORY + "/Home/Index";
-                filterContext.Result = new RedirectResult(defaultUrl);
+                return false;
             }
+            return true;
         }
     }
 }
