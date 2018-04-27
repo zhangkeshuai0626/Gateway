@@ -1,5 +1,5 @@
-﻿using Common.Utils;
-using Models.AppModels;
+﻿using Common.AppModel;
+using Common.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,33 +8,40 @@ using System.Data.Entity;
 
 namespace Models.DbModels
 {
+
+
+
     /// <summary>
     /// 数据库模型基类,提供公有的属性
     /// </summary>
     public abstract class DbBaseModel : IValidatableObject
     {
+        protected DbContext Db = DbFactory.CreateDbContext();
         public DbBaseModel()
         {
             LoginSessionModel user = SessionHelper.Get(Enumer.Session.LoginInfo) as LoginSessionModel;
             if (user == null)
             {
                 this.CreateBy = "";
+                this.LastModifyBy = "";
             }
             else
             {
                 this.CreateBy = user.Employee.EmployeeId;
+                this.LastModifyBy = user.Employee.EmployeeId;
             }
             this.CreateTime = DateTime.Now;
+            this.LastModifyTime = DateTime.Now;
             this.Enable = true;
 
         }
-        protected DbContext Db = DbFactory.CreateDbContext();
+
         /// <summary>
         /// 主键
         /// </summary>
         [Display(Name = "主键ID")]
         [Key]
-        public int Id { get; set; }
+        public int Id { get; private set; }
         /// <summary>
         /// 是否有效
         /// </summary>
@@ -45,25 +52,25 @@ namespace Models.DbModels
         /// 创建人
         /// </summary>
         [Display(Name = "创建人Id")]
-        [Required(ErrorMessage = "创建人不能为空"), MaxLength(50)]
-        public string CreateBy { get; set; }
+        [MaxLength(50)]
+        public string CreateBy { get; private set; }
         /// <summary>
         /// 创建时间
         /// </summary>
         [Display(Name = "创建时间")]
         [Required(ErrorMessage = "创建时间不能为空")]
-        public DateTime CreateTime { get; set; }
+        public DateTime CreateTime { get; private set; }
         [MaxLength(50)]
         /// <summary>
         /// 最后修改人
         /// </summary>
         [Display(Name = "最后修改人")]
-        public string LastModifyBy { get; set; }
+        public string LastModifyBy { get; private set; }
         /// <summary>
         /// 最后修改时间
         /// </summary>
         [Display(Name = "最后修改时间")]
-        public DateTime? LastModifyTime { get; set; }
+        public DateTime? LastModifyTime { get; private set; }
         /// <summary>
         /// 备注
         /// </summary>
@@ -74,7 +81,7 @@ namespace Models.DbModels
         /// 版本号
         /// </summary>
         [Timestamp, JsonIgnoreAttribute]
-        public byte[] Version { get; set; }
+        public byte[] Version { get; private set; }
 
         /// <summary>
         /// 模型验证的方法

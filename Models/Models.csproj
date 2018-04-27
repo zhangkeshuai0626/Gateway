@@ -71,9 +71,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppModels\DataResult.cs" />
-    <Compile Include="AppModels\LoginSessionModel.cs" />
-    <Compile Include="AppModels\PageModel.cs" />
     <Compile Include="DbFactory.cs" />
     <Compile Include="DbModels\Application.cs" />
     <Compile Include="DbModels\DbBaseModel.cs" />
@@ -106,8 +103,33 @@
     <Compile Include="Migrations\201804261636516_papertest3.Designer.cs">
       <DependentUpon>201804261636516_papertest3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804270240416_papertest4.cs" />
+    <Compile Include="Migrations\201804270240416_papertest4.Designer.cs">
+      <DependentUpon>201804270240416_papertest4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804270241591_papertest5.cs" />
+    <Compile Include="Migrations\201804270241591_papertest5.Designer.cs">
+      <DependentUpon>201804270241591_papertest5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804270325003_papertest6.cs" />
+    <Compile Include="Migrations\201804270325003_papertest6.Designer.cs">
+      <DependentUpon>201804270325003_papertest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804270419548_papertest7.cs" />
+    <Compile Include="Migrations\201804270419548_papertest7.Designer.cs">
+      <DependentUpon>201804270419548_papertest7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804270441088_papertest8.cs" />
+    <Compile Include="Migrations\201804270441088_papertest8.Designer.cs">
+      <DependentUpon>201804270441088_papertest8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804270441548_papertest9.cs" />
+    <Compile Include="Migrations\201804270441548_papertest9.Designer.cs">
+      <DependentUpon>201804270441548_papertest9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DbModels\LoginSessionModel.cs" />
     <Compile Include="Validator\DomainAttribute.cs" />
     <Compile Include="Validator\EnumerAttribute.cs" />
     <Compile Include="Validator\UniqueAttribute.cs" />
@@ -156,7 +178,26 @@
     <EmbeddedResource Include="Migrations\201804261636516_papertest3.resx">
       <DependentUpon>201804261636516_papertest3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270240416_papertest4.resx">
+      <DependentUpon>201804270240416_papertest4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270241591_papertest5.resx">
+      <DependentUpon>201804270241591_papertest5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270325003_papertest6.resx">
+      <DependentUpon>201804270325003_papertest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270419548_papertest7.resx">
+      <DependentUpon>201804270419548_papertest7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270441088_papertest8.resx">
+      <DependentUpon>201804270441088_papertest8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270441548_papertest9.resx">
+      <DependentUpon>201804270441548_papertest9.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

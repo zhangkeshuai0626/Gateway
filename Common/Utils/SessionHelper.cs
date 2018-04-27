@@ -18,7 +18,12 @@ namespace Common.Utils
         public static object Get(Enumer.Session key)
         {
             string name = key.ToString();
-            return HttpContext.Current.Session[name];
+            var context = HttpContext.Current;
+            if (context != null && context.Session != null)
+            {
+                return HttpContext.Current.Session[name];
+            }
+            return null;
         }
 
         /// <summary>
@@ -26,7 +31,7 @@ namespace Common.Utils
         /// </summary>
         /// <param name="sessionKey"></param>
         /// <param name="data"></param>
-        public static void Insert(Enumer.Session sessionKey, object data)
+        public static void Set(Enumer.Session sessionKey, object data)
         {
             string key = sessionKey.ToString();
             HttpContext.Current.Session[key] = data;

@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppModel\DataResult.cs" />
+    <Compile Include="AppModel\ModelStateError.cs" />
+    <Compile Include="AppModel\PageModel.cs" />
     <Compile Include="Configs\Configs.cs" />
     <Compile Include="Configs\Enumer.cs" />
     <Compile Include="Extension\Objects.cs" />

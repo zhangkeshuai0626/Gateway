@@ -1,7 +1,5 @@
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\Database\Gateway.mdf
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\Database\Gateway_log.ldf
-E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\DAL.exe.config
-E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\DAL.exe
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\DAL.pdb
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\EntityFramework.dll
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\EntityFramework.SqlServer.dll
@@ -18,7 +16,6 @@ E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\log4net.xml
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 E:\学习\自建项目\门户网站\Gateway\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-E:\学习\自建项目\门户网站\Gateway\DAL\obj\Debug\DAL.exe
 E:\学习\自建项目\门户网站\Gateway\DAL\obj\Debug\DAL.pdb
 E:\练习项目\门户网站\Gateway\DAL\bin\Debug\Database\Gateway.mdf
 E:\练习项目\门户网站\Gateway\DAL\bin\Debug\Database\Gateway_log.ldf
@@ -41,3 +38,7 @@ E:\练习项目\门户网站\Gateway\DAL\obj\Debug\DAL.csprojResolveAssemblyRefe
 E:\练习项目\门户网站\Gateway\DAL\obj\Debug\DAL.pdb
 E:\练习项目\门户网站\Gateway\DAL\bin\Debug\DAL.dll
 E:\练习项目\门户网站\Gateway\DAL\obj\Debug\DAL.dll
+E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\DAL.dll
+E:\学习\自建项目\门户网站\Gateway\DAL\obj\Debug\DAL.dll
+E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\IDAL.dll
+E:\学习\自建项目\门户网站\Gateway\DAL\bin\Debug\IDAL.pdb

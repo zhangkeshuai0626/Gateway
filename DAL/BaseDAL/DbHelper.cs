@@ -17,16 +17,6 @@ namespace DAL
     internal class DbHelper
     {
         private DbHelper() { }
-
-        internal static DbHelper GetDbHelper()
-        {
-            var helper = HttpHelper.GetHttpContextItem(Configs.DBHELPER_ITEM) as DbHelper;
-            if (helper == null)
-            {
-                helper = new DbHelper();
-            }
-            return helper;
-        }
         /// <summary>
         /// 当前上下文唯一的数据库上下文
         /// </summary>

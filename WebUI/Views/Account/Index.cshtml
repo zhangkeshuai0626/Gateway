@@ -1,0 +1,165 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+
+
+<div id="header">
+
+</div>
+<style type="text/css">
+    #weixin_login_container iframe {
+        width: 158px;
+        height: 158px;
+    }
+</style>
+<div class="login-wrap">
+    <div class="wrap clearfix">
+        <div class="form-box fr loginV2" style="display:block;">
+            <ul class="form-tab clearfix">
+                <li class="tab-li"><a href="javascript:void(0);">微信登录<i class="icon"></i></a></li>
+                <li class="tab-li cur"><a href="javascript:void(0);">账号登录</a></li>
+            </ul>
+            @*威信登录*@
+            <div class="form-con">
+                <div class="weixin-login" style="display:none;">
+                    <div class="wx-box clearfix">
+                        <a href="javascript:void(0);" class="wx-img-box">
+                            <img class="wx-qrCode" src="../Content/images/ewm.jpg" id="qrCodeImg">
+                            <img class="wx-qrCode-logo" src="../Content/images/ewm.jpg" id="qrCodeLogo">
+                            <img class="statusImg" src="../Content/images/wx-confirm.png" id="statusImg">
+                            <div id="weixin_login_container" style="display:none;"></div>
+                        </a>
+                        <img src="../Content/images/wx-image.png" class="wx-image">
+                    </div>
+                    <p class="wx-text">微信扫一扫  快速登录</p>
+                    <p class="wx-help"><a href="javascript:void(0);" class="help-a">如何使用？</a></p>
+                </div>
+                @*用户登录*@
+                <div class="login-normal" style="display:block;">
+                    <form id="nameLoginForm" method="post">
+                        <div class="form-error" style=""><i></i><label class="text"></label></div>
+                        <dl class="clearfix">
+                            <dt>账户名：</dt>
+                            <dd><input type="text" name="LoginAccount" id="normalUser" class="input-text" autocomplete="off" /><span class="placeholder">用户名/邮箱/手机号</span></dd>
+                        </dl>
+                        <dl class="top1 clearfix">
+                            <dt>密<em></em>码：</dt>
+                            <dd><input type="password" name="LoginPassword" id="normalPassword" class="input-text"><span class="placeholder">请输入密码</span></dd>
+                        </dl>
+
+                        <div class="form-remember">
+
+                            <input name="rememberName" type="checkbox" id="remUser" class="rem-check" style="display:none;" checked="checked">
+                            <span class="rem-box rem-box-r memCheck"><input name="rememberMe" type="checkbox" id="remLogin" class="rem-check">三个月之内免登录</span>
+                        </div>
+                        <div class="btn-box clearfix">
+                            <input id="normalSubmit" class="btn-settlement" type="button" value="登    录">
+
+                        </div>
+                        <div class="link-box clearfix">
+                            <a href="javascript:void(0);" class="register">新用户注册</a>
+                            <a href="javascript:void(0);" class="forget-pass">忘记密码？</a>
+                        </div>
+                    </form>
+                    <div class="login-short clearfix">
+                        <div class="short-left">
+                            <h3>使用合作账号登录：</h3>
+                            <ul class="clearfix">
+                                <li class="qq"><a a href="javascript:void(0);"></a></li>
+                                <li class="sina"><a href="javascript:void(0);"></a></li>
+                                <li class="weixin"><a href="javascript:void(0);"></a></li>
+                            </ul>
+                        </div>
+                        <div class="short-right">
+                            <h3>您还可以选择：</h3>
+                            <p class="phone-short clearfix">
+                                <i class="phone"></i>
+                                <a href="javascript:void(0);" tjjj="" class="txt phoneLogin">手机快捷登录</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -手机快捷登录 -->
+        <div class="form-box fr shortLogin" style="display:none;">
+            <h5 class="title">快捷登录</h5>
+            <div class="form-con">
+                <form id="mobileLoginForm" method="post" onsubmit="return mobileLoginCheck();">
+                    <div class="form-error" style=""><i></i><label class="text"></label></div>
+                    <dl class="clearfix">
+                        <dt>手机号：</dt>
+                        <dd><input name="mobile" type="text" id="partnerPhone" autocomplete="off" class="input-text mobile" maxlength="11" onblur="mobileCheck(this);"><span class="placeholder">请输入手机号</span></dd>
+                    </dl>
+                    <dl class="top1 clearfix">
+                        <dt>验证码：</dt>
+                        <dd>
+                            <input name="smsCaptcha" type="text" id="partnerYzm" class="input-yzm" onblur="captchCheck(this);" maxlength="4" autocomplete="off" />
+                            <span class="span-yzm">
+                                <img id="smsCaptchaImage" src="../Content/images/code.jpg" title="点击图片刷新校验码" alt="点击图片刷新校验码" onclick="changeCode('smsCaptchaImage','partnerYzm');" />
+                                <a href="javascript:void(0)changeCode('smsCaptchaImage','partnerYzm');" class="forget-pass">换一张</a>
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl class="top2 clearfix">
+                        <dt>校验码：</dt>
+                        <dd>
+                            <input name="code" type="text" id="partnerJym" class="input-jym" maxlength="6" autocomplete="off" />
+                            <a id="smsSendButton" href="javascript:void(0);" class="span-jym">发送短信校验码</a>
+                        </dd>
+                    </dl>
+                    <div class="form-remember">
+
+                        @* <input name="rememberName" type="checkbox" id="remUser" class="rem-check" style="display:none;" checked="checked">
+                            <span class="rem-box rem-box-r"><input name="rememberMe" type="checkbox" id="remLogin" class="rem-check">三个月之内免登录</span>*@
+                    </div>
+                    <div class="btn-box clearfix">
+                        <input id="partnerSubmit" class="btn-settlement" type="button" value="登    录">
+
+                    </div>
+                    <div class="link-box clearfix">
+                        <a href="javascript:void(0);" class="backLogin">返回账号登录>></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="jia_footer">
+    <div class="jia_fooinfo">
+        <div class="jia_foocon">
+            <p class="jia_foolink">
+                @*<a href="#" rel="nofollow" target="_blank">关于我们</a> <span class="jia_split">|</span>
+                    <a href="#" target="_blank" rel="nofollow">联系我们</a> <span class="jia_split">|</span>
+                     <a href="javascript:void(0);" class="jia_fooopen">更多</a>*@
+            </p>
+        </div>
+        <p>
+            版权所有Copyright ? 2005-2016 www.17sucai.com All rights reserved
+        </p>
+        <p>
+            沪ICP备xxxxxx号 沪B2-xxxx 组织机构代码证：xxxxx—1
+        </p>
+        <p>
+            中国互联网协会信用评价中心网信认证 网信编码:xxxxxx1
+        </p>
+
+        <p>
+            <a href="javascript:void(0);">
+                <img src="../Content/images/gov-inco.jpg" border="0" width="40" height="44">
+            </a>
+            <a href="javascript:void(0);/315/" target="_blank" style="margin-left:15px;">
+                <img src="../Content/images/315.gif" border="0">
+            </a>
+            <a style="margin-left:15px;" target="_blank" href="javascript:void(0);">
+                <img border="0" src="../Content/images/jb.jpg">
+            </a>
+        </p>
+    </div>
+</div>
+
+<script src="~/Scripts/Account/Index.js"></script>

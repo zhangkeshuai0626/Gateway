@@ -52,15 +52,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginDAL.cs" />
+    <Compile Include="LogDAL.cs" />
+    <Compile Include="DictionaryTypeDAL.cs" />
+    <Compile Include="DepartmentDAL.cs" />
+    <Compile Include="RoleDAL.cs" />
+    <Compile Include="EmployeeDepartmentDAL.cs" />
+    <Compile Include="EmployeeApplicationDAL.cs" />
+    <Compile Include="EmployeeDAL.cs" />
+    <Compile Include="DictionaryDAL.cs" />
+    <Compile Include="DepartmentRoleApplicationDAL.cs" />
+    <Compile Include="DepartmentRoleDAL.cs" />
+    <Compile Include="DepartmentApplicationDAL.cs" />
+    <Compile Include="ApplicationDAL.cs" />
     <Compile Include="BaseDAL\BaseDAL.cs" />
     <Compile Include="BaseDAL\DbHelper.cs" />
-    <Compile Include="InitDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8292BFD9-D6F1-4EF0-B08C-5CF15CD058EE}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{4D5B6EC6-D24E-4B15-B816-AF401A3D7976}</Project>
+      <Name>IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{2CA8C473-E676-47FD-8DEE-B19645DD63E3}</Project>

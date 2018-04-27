@@ -13,21 +13,26 @@ namespace Models.DbModels
     /// </summary>
     public class Role : DbBaseModel
     {
+        /// <summary>
+        /// 必填项,角色Id
+        /// </summary>
 
         [Required(ErrorMessage = "职务Id不能为空"), MaxLength(50)]
-        public string RoleId { get; set; }
-
+        public string RoleId { get;  set; }
+        /// <summary>
+        /// 角色名称,必填项目
+        /// </summary>
         [Required(ErrorMessage = "职务名称不能为空"), MaxLength(50)]
         public string RoleName { get; set; }
 
         /// <summary>
-        /// 部门编号
+        /// 部门编号,必填
         /// </summary>
         [Required(ErrorMessage = "部门编号不能为空"), MaxLength(200)]
         [Unique(TableName = "t_role", ErrorMessage = "部门编号不能重复", ColumnName = "RoleCode")]
         public string RoleCode { get; set; }
         /// <summary>
-        /// 部门顺序
+        /// 部门顺序,必填
         /// </summary>
         [Required(ErrorMessage = "部门顺序不能为空")]
         public int Sort { get; set; }
@@ -36,6 +41,8 @@ namespace Models.DbModels
         /// </summary>
         [MaxLength(200)]
         public string Icon { get; set; }
+
+
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

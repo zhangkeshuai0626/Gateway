@@ -47,13 +47,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseBLL\BaseBLL.cs" />
-    <Compile Include="InitBLLcs.cs" />
+    <Compile Include="LoginBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{1135FAEB-80D7-4CE6-BF97-F93AE6634E13}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{8292bfd9-d6f1-4ef0-b08c-5cf15cd058ee}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALContainer\DALContainer.csproj">
+      <Project>{98f5e429-95a8-45c6-beb2-1db63e98ef47}</Project>
+      <Name>DALContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{4d5b6ec6-d24e-4b15-b816-af401a3d7976}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{2ca8c473-e676-47fd-8dee-b19645dd63e3}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

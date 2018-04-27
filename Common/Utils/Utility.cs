@@ -55,6 +55,26 @@ namespace Common.Utils
             string result = code.MD5Code().MD5Code();
             return result;
         }
+
+        /// <summary>
+        /// 根据排序获取编码
+        /// </summary>
+        /// <param name="sort"></param>
+        /// <returns></returns>
+        public string GetCode(int sort,string parentCode="")
+        {
+            string code = string.Empty;
+            string formart = "000";
+            if (parentCode.IsNullOrEmpty())
+            {
+                code = sort.ToString(formart);
+            }
+            else
+            {
+                code=parentCode+"-"+sort.ToString(formart);
+            }
+            return code;
+        }
         /// <summary>
         /// 过滤SQl语句
         /// </summary>

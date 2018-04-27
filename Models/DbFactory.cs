@@ -17,11 +17,11 @@ namespace Models
         public static DbContext CreateDbContext()
         {
 
-            DbContext dbContext = HttpHelper.GetHttpContextItem(Configs.GATEWAY_ITEM) as DbContext;
+            DbContext dbContext = HttpHelper.GetHttpContextItem(Configs.GATEWAY_DBCONTEXT) as DbContext;
             if (dbContext == null)
             {
                 dbContext = new DbGatewayContext();
-                HttpHelper.SetHttpContextItem(Configs.GATEWAY_ITEM, dbContext);
+                HttpHelper.SetHttpContextItem(Configs.GATEWAY_DBCONTEXT, dbContext);
             }
             return dbContext;
         }

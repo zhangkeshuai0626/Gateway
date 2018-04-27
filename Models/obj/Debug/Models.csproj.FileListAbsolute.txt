@@ -45,3 +45,12 @@ E:\练习项目\门户网站\Gateway\Models\obj\Debug\Models.csproj.GenerateReso
 E:\练习项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest1.resources
 E:\练习项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest2.resources
 E:\练习项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest3.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest1.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest2.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest3.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest4.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest5.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest6.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest7.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest8.resources
+E:\学习\自建项目\门户网站\Gateway\Models\obj\Debug\Models.Migrations.papertest9.resources

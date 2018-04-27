@@ -45,14 +45,14 @@
             modelBuilder.Entity<Dictionary>().ToTable("t_dictionary");
             modelBuilder.Entity<Employee>().ToTable("t_employee");
             modelBuilder.Entity<DepartmentApplication>().ToTable("t_department_application");
-            modelBuilder.Entity<DepartmentRole>().ToTable("t_departmentrole");
-            modelBuilder.Entity<DepartmentRoleApplication>().ToTable("t_departmentroleapplication");
+            modelBuilder.Entity<DepartmentRole>().ToTable("t_department_role");
+            modelBuilder.Entity<DepartmentRoleApplication>().ToTable("t_departmentrole_application");
             modelBuilder.Entity<Dictionary>().ToTable("t_dictionary");
-            modelBuilder.Entity<EmployeeApplication>().ToTable("t_employeeapplication");
-            modelBuilder.Entity<EmployeeDepartment>().ToTable("t_employeedepartment");
+            modelBuilder.Entity<EmployeeApplication>().ToTable("t_employee_application");
+            modelBuilder.Entity<EmployeeDepartment>().ToTable("t_employee_department");
             modelBuilder.Entity<Role>().ToTable("t_role");
             modelBuilder.Entity<Log>().ToTable("t_log");
-            modelBuilder.Entity<DictionaryType>().ToTable("t_dictionarytype");
+            modelBuilder.Entity<DictionaryType>().ToTable("t_dictionary_type");
             modelBuilder.Entity<Login>().ToTable("t_login");
         }
     }

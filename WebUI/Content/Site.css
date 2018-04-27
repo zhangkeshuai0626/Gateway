@@ -1,0 +1,46 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+.hidden {
+    display:none;
+}
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*.fixed-table-toolbar {
+    background-color:#EFF3F8;
+}*/
+.layout {
+    padding:5px 0 0 5px;
+}
+
+.icon-large:hover {
+    font-size: 15px;
+}
+.btn {
+    margin-right:2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+i {
+ margin-right:2px;
+}

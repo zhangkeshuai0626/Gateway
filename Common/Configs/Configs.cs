@@ -10,19 +10,19 @@ public static class Configs
     /// <summary>
     /// 默认密码
     /// </summary>
-    public static readonly string DEFAULT_PASSWORD = "1";
+    public const string DEFAULT_PASSWORD = "1";
     /// <summary>
     /// IIS根目录
     /// </summary>
-    public static readonly string IIS_DIRECTORY = "";
+    public const string IIS_DIRECTORY = "";
     /// <summary>
     /// 地址栏中应用程序参数名称
     /// </summary>
-    public static readonly string APPID = "AppId";
+    public const string APPID = "AppId";
     /// <summary>
     /// 时间日期字符串
     /// </summary>
-    public static readonly string DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    public const string DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     /// <summary>
     /// 允许上传的文件类型
     /// </summary>
@@ -30,11 +30,9 @@ public static class Configs
     /// <summary>
     /// Gateway 数据库实体缓存键
     /// </summary>
-    public const string GATEWAY_ITEM = "GatewayEntity";
-    /// <summary>
-    /// Gateway 数据库实体缓存键
-    /// </summary>
-    public const string DBHELPER_ITEM = "DbHelper";
+    public const string GATEWAY_DBCONTEXT = "GatewayDbContext";
+
+
 
 }
 

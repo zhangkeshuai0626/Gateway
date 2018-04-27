@@ -23,7 +23,7 @@ namespace Models.DbModels
 
         [Required, Display(Name = "应用程序类型")]
         public int ApplicationType { get; set; }
-        [Required, MaxLength(50), Display(Name = "所属程序ID")]
+        [MaxLength(50), Display(Name = "所属程序ID")]
         public string ParentId { get; set; }
         [MaxLength(200), Display(Name = "图标")]
         public string Icon { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
-using Models.AppModels;
 using Common.Utils;
+using Common.AppModel;
+using Models.DbModels;
 
 namespace DFlow.Web.Controllers
 {
@@ -27,26 +28,43 @@ namespace DFlow.Web.Controllers
             }
         }
 
+        /// <summary>
+        /// 默认页面
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public virtual ActionResult Index()
         {
             return View();
         }
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public virtual ActionResult Add()
         {
             return View();
         }
+        /// <summary>
+        /// 详情
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public virtual ActionResult Detail()
         {
             return View();
         }
+        /// <summary>
+        /// 编辑页面
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public virtual ActionResult Edit()
         {
             return View();
         }
+
         protected BaseController() : base()
         {
             //初始化菜单
